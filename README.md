@@ -16,6 +16,8 @@ A Clean Architecture, proposta por Robert C. Martin, também conhecido como Uncl
 
 4. **Frameworks e Drivers (Frameworks e Drivers Externos)**: São os componentes externos à aplicação, como frameworks, bibliotecas e serviços. Eles são os detalhes técnicos que devem ser mantidos do lado de fora da arquitetura limpa.
 
+![Clean Architecture](https://camo.githubusercontent.com/1e62a50a0ee671b225bee7a7218d4ea660f63fa0fc445b772e1bb0038cc400cf/68747470733a2f2f746865776973656465762e636f6d2e62722f31613835316635663463363136386364386230373263613732623464396665342e737667)
+
 ## Padrões de Design Utilizados
 
 Além da Clean Architecture, este projeto utiliza dois padrões de design importantes:
