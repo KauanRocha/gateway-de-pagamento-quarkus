@@ -2,7 +2,7 @@ package br.com.gateway.infra.database.postgres.models;
 
 import br.com.gateway.domain.enums.PaymentStatusEnum;
 import br.com.gateway.domain.enums.PaymentTypeEnum;
-import io.quarkus.hibernate.reactive.panache.PanacheEntityBase;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;

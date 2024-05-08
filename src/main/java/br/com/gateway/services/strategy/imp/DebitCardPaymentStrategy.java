@@ -1,15 +1,18 @@
-package br.com.gateway.domain.strategy.payment;
+package br.com.gateway.services.strategy.imp;
 
 import br.com.gateway.domain.dtos.PaymentRequest;
 import br.com.gateway.domain.entities.Payment;
 import br.com.gateway.domain.enums.PaymentTypeEnum;
+import br.com.gateway.domain.strategy.payment.PaymentStrategy;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 
-public class PixPaymentStrategy implements PaymentStrategy {
+@ApplicationScoped
+public class DebitCardPaymentStrategy implements PaymentStrategy {
 
-    private static final BigDecimal TAX_PERCENT = new BigDecimal("2.99");
+    private static final BigDecimal TAX_PERCENT = new BigDecimal("3.99");
 
     @Override
     public Payment processPayment(PaymentRequest paymentRequest) {
@@ -23,7 +26,7 @@ public class PixPaymentStrategy implements PaymentStrategy {
 
     @Override
     public PaymentTypeEnum getType() {
-        return PaymentTypeEnum.PIX;
+        return PaymentTypeEnum.DEBIT_CARD;
     }
 
     @Override

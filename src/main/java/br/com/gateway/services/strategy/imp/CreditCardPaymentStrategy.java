@@ -1,13 +1,16 @@
-package br.com.gateway.domain.strategy.payment;
+package br.com.gateway.services.strategy.imp;
 
 import br.com.gateway.domain.dtos.PaymentRequest;
 import br.com.gateway.domain.entities.Payment;
 import br.com.gateway.domain.enums.PaymentTypeEnum;
+import br.com.gateway.domain.strategy.payment.PaymentStrategy;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 
-public class CreditCarfPaymentStrategy implements PaymentStrategy {
+@ApplicationScoped
+public class CreditCardPaymentStrategy implements PaymentStrategy {
 
     private static final BigDecimal TAX_PERCENT = new BigDecimal("4.99");
 

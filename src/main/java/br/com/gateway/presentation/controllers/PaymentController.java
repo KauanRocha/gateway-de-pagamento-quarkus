@@ -1,8 +1,9 @@
 package br.com.gateway.presentation.controllers;
 
 import br.com.gateway.domain.dtos.PaymentRequest;
-import br.com.gateway.domain.entities.Payment;
 import br.com.gateway.services.PaymentService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -22,7 +23,7 @@ public class PaymentController {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(@Body PaymentRequest paymentRequest) {
+    public Response create(@Valid @NotNull PaymentRequest paymentRequest) {
        return Response.ok(paymentService.create(paymentRequest)).build();
     }
 }
