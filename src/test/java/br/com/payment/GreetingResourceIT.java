@@ -1,4 +1,4 @@
-package org.acme;
+package br.com.payment;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
