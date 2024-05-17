@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  my-quarkus-app:
+    image: quarkus/payment-gateway3:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_USERNAME=server_hs0n_user
+      - DATABASE_PASSWORD=1i5cGKVBAuY7XFmZymTdIn5AyNRAWjmj
+      - DATABASE_URL=jdbc:postgresql://dpg-cp0ku5g21fec7386m1c0-a.oregon-postgres.render.com/server_hs0n

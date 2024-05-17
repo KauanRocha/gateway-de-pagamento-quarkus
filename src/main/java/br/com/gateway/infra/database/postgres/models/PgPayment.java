@@ -3,9 +3,7 @@ package br.com.gateway.infra.database.postgres.models;
 import br.com.gateway.domain.enums.PaymentStatusEnum;
 import br.com.gateway.domain.enums.PaymentTypeEnum;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -14,6 +12,7 @@ import java.math.BigDecimal;
 public class PgPayment extends PanacheEntityBase {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private BigDecimal value;

@@ -5,15 +5,18 @@ import br.com.gateway.domain.enums.RepositoryEnum;
 import br.com.gateway.domain.repositoties.PaymentRepository;
 import br.com.gateway.infra.database.postgres.converters.PaymentConverter;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 
 @ApplicationScoped
-public class PgPaymentRepository implements PaymentRepository {
+public class PgPaymentRepository implements PaymentRepository  {
 
     @Override
+    @Transactional
     public Payment save(Payment payment) {
         var pgPayment  = PaymentConverter.toEntity(payment);
-        pgPayment.persist();
-        return PaymentConverter.toDomain(pgPayment);
+        pgPayment.persistAndFlush();
+        payment.setId(pgPayment.getId());
+        return payment;
     }
 
     @Override
