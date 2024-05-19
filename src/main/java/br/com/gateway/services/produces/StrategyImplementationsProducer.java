@@ -1,5 +1,6 @@
 package br.com.gateway.services.produces;
 
+import br.com.gateway.domain.exceptions.DefaultException;
 import br.com.gateway.domain.strategy.payment.PaymentStrategy;
 import br.com.gateway.domain.strategy.payment.PixPaymentStrategy;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class PaymentStrategyProducer {
+public class StrategyImplementationsProducer {
 
     @Produces
     @ApplicationScoped
@@ -20,7 +21,7 @@ public class PaymentStrategyProducer {
             try {
                 return clazz.getDeclaredConstructor().newInstance();
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                throw new DefaultException();
             }
         }).collect(Collectors.toList());
     }

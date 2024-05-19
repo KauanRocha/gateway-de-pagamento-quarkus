@@ -11,6 +11,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+
 @Path("api/payment")
 public class PaymentController {
 
@@ -24,6 +25,6 @@ public class PaymentController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(@Valid @NotNull PaymentRequest paymentRequest) {
-       return Response.ok(paymentService.create(paymentRequest)).build();
+        return Response.ok(paymentService.create(paymentRequest)).build();
     }
 }
