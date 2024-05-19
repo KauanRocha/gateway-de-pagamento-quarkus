@@ -1,4 +1,4 @@
-package br.com.gateway.domain.exceptions;
+package br.com.gateway.presentation.handlers;
 
 public class ErrorMessage {
 

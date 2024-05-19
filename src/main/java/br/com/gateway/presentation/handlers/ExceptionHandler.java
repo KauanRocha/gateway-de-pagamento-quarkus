@@ -1,5 +1,6 @@
-package br.com.gateway.domain.exceptions;
+package br.com.gateway.presentation.handlers;
 
+import br.com.gateway.domain.exceptions.DefaultException;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;

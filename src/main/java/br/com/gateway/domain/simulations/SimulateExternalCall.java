@@ -1,4 +1,4 @@
-package br.com.gateway.simulations;
+package br.com.gateway.domain.simulations;
 
 import java.util.Random;
 

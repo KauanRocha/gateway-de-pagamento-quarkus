@@ -5,7 +5,7 @@ import br.com.gateway.domain.entities.Payment;
 import br.com.gateway.domain.exceptions.PartnerException;
 import br.com.gateway.domain.repositoties.PaymentRepository;
 import br.com.gateway.domain.strategy.payment.PaymentStrategy;
-import br.com.gateway.simulations.SimulateExternalCall;
+import br.com.gateway.domain.simulations.SimulateExternalCall;
 
 public class ProcessPaymentUseCase {
 
